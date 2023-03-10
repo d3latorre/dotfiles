@@ -1,3 +1,6 @@
+---------------------
+-- LUA SETUP
+---------------------
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -14,9 +17,12 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     {import = "jmdlts.plugins"},
 }, {})
--- i muss use this setup to make nvim tree usable
+---------------------------------
+
+-- This setup is to make nvim tree usable
 require("nvim-tree").setup{}
--- Off set of the tabs with nvimtree
+
+-- Off set of tabs to work propiertly with nvimtree
 vim.api.nvim_create_autocmd('FileType', {
   callback = function(tbl)
     local set_offset = require('bufferline.api').set_offset
@@ -44,5 +50,5 @@ vim.api.nvim_create_autocmd('FileType', {
       once = true,
     })
   end,
-  pattern = 'NvimTree', -- or any other filetree's `ft`
+  pattern = 'NvimTree', -- or any other filetree's plugin
 })
