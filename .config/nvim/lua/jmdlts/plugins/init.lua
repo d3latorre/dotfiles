@@ -1,3 +1,5 @@
 return {
-    "tpope/vim-dotenv"
+    "tpope/vim-dotenv",
+    "folke/which-key.nvim",
+    "numToStr/Comment.nvim"
 }

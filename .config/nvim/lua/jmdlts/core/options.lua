@@ -36,3 +36,9 @@ opt.clipboard:append("unnamedplus")
 --split windows
 opt.splitright = true
 opt.splitbelow = true
+
+--sign column
+opt.signcolumn = 'yes'
+
+-- mouse mode
+opt.mouse= 'a'
