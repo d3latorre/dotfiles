@@ -4,7 +4,9 @@ folder structure
     nvim/
     ├─ init.lua
     ├─ lua/
-    │  ├─ jmdlts/   
+    │  ├─ jmdlts/
+    │  │  ├─ plugconfig/
+    │  │  │  ├─ [namePlugin].lua 
     │  │  ├─ plugins/
     │  │  │  ├─ [namePlugin].lua
     │  │  │  ├─ init.lua 
