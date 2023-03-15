@@ -34,7 +34,6 @@ vim.api.nvim_create_autocmd('FileType', {
 local function open_nvim_tree(data)
     -- buffer is a [No Name]
     local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
-
     -- buffer is a directory
     local directory = vim.fn.isdirectory(data.file) == 1
 
