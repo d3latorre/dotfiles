@@ -9,8 +9,14 @@ keymap.set("n", "<leader>se", "<C-w>=")       -- make split windows equal width 
 keymap.set("n", "<leader>sx", ":close<CR>")   -- close current split window
 keymap.set("n", '<leader>mu', "<C-w><Up>")    -- move to above window
 keymap.set("n", '<leader>ml', "<C-w><Left>")  -- move to left window
-keymap.set("n", '<leader>md', "<C-w><Down>")  -- move to Down window
+keymap.set("n", '<leader>md', "<C-w><Down>")  -- move to below window
 keymap.set("n", '<leader>mr', "<C-w><Right>") -- move to right window
+keymap.set("n", '<A-k>', "<C-w><Up>")         -- move to above window
+keymap.set("n", '<A-j>', "<C-w><Down>")       -- move to below window
+keymap.set("n", '<A-h>', "<C-w><Left>")       -- move to left window
+keymap.set("n", '<A-l>', "<C-w><Right>")      -- move to right window
+keymap.set('t', '<Esc>', [[<C-\><C-n>]])
+
 ---------------------
 -- Plugin Keybinds
 ----------------------
