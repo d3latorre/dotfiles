@@ -10,7 +10,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 --line wrapping
-opt.wrap =false
+opt.wrap = false
 
 --search settings
 opt.ignorecase = true
@@ -31,7 +31,23 @@ opt.backspace = "indent,eol,start"
 
 --clipboard
 --This "force" nvim to use the clipboard of the PC
-opt.clipboard:append("unnamedplus")
+--opt.clipboard = "unnamedplus"
+if vim.fn.has('wsl') == 1 then
+    opt.clipboard = {
+        name = 'WslClipboard',
+        copy = {
+            ['+'] = 'clip.exe',
+            ['*'] = 'clip.exe',
+        },
+        paste = {
+            ['+'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            ['*'] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+        },
+        cache_enabled = 0,
+    }
+else
+    opt.clipboard = "unnamedplus"
+end
 
 --split windows
 opt.splitright = true
@@ -41,4 +57,4 @@ opt.splitbelow = true
 opt.signcolumn = 'yes'
 
 -- mouse mode
-opt.mouse= 'a'
+opt.mouse = 'a'
