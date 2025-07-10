@@ -5,6 +5,8 @@ Repository to store my dotfiles
 
 - https://scottspence.com/posts/windsurf-setup-for-wsl#launch-windsurf-from-the-terminal
 
+- https://github.com/docker/for-win/issues/8336 (Error docker completitions)
+
 - For it to work on wsl we need to change the nameserver, the server of dns that wsl uses. We add dns srvers also when is necessary to use a VPN on windows
 
       sudo rm /etc/resolv.conf
