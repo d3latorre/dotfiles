@@ -14,6 +14,7 @@ Im using stow for all the process of updating configs, there is a script that au
 - nvim
 - pyenv
 - nvm
+- bat
 
 ## THINGS TO CHECK FOR WSL 
 
