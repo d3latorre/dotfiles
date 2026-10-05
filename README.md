@@ -1,7 +1,25 @@
 # dotfiles
 Repository to store my dotfiles
 
-## Check for wsl
+## HOW  IT WORKS
+
+Im using stow for all the process of updating configs, there is a script that automatically stows
+
+### Basic Packages to install
+
+- zsh
+- oh-my-zsh
+- stow
+- git
+- nvim
+- pyenv
+- nvm
+
+## THINGS TO CHECK FOR WSL 
+
+> [!IMPORTANT]
+> Maybe they need to be automatize
+
 
 - https://scottspence.com/posts/windsurf-setup-for-wsl#launch-windsurf-from-the-terminal
 
